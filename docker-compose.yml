@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  app:
+    image: node:lts
+    command: npm install -g nodemon
+    command: npm run dev
+    ports:
+      - 3000:3000
+    working_dir: /express_app
+    volumes:
+        - ./:/express_app
