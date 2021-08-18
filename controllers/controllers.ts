@@ -45,6 +45,7 @@ export const newPost = (req:Request, res:Response) => {
     const post = req.body;
     posts.push({...post, id: uuidv4()});
     res.send('User was successfully created')
+    console.log(post);
 }
 
 export const getPostById = (req:Request, res:Response) => {
